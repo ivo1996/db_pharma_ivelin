@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.uniruse.controller.SuppliersController"
+            prefHeight="800.0" prefWidth="1200.0">
+
+    <VBox layoutX="26.0" layoutY="22.0" spacing="15.0">
+        <Label text="ID">
+            <font>
+                <Font size="14.0"/>
+            </font>
+        </Label>
+        <Label text="Phone number">
+            <font>
+                <Font size="14.0"/>
+            </font>
+        </Label>
+        <Label text="E-mail">
+            <font>
+                <Font size="14.0"/>
+            </font>
+        </Label>
+        <Label text="Bank number">
+            <font>
+                <Font size="14.0"/>
+            </font>
+        </Label>
+        <Label text="Credit card number">
+            <font>
+                <Font size="14.0"/>
+            </font>
+        </Label>
+        <Label text="Street">
+            <font>
+                <Font size="14.0"/>
+            </font>
+        </Label>
+        <Label text="City">
+            <font>
+                <Font size="14.0"/>
+            </font>
+        </Label>
+        <Label text="Province">
+            <font>
+                <Font size="14.0"/>
+            </font>
+        </Label>
+        <Label text="Zip code">
+            <font>
+                <Font size="14.0"/>
+            </font>
+        </Label>
+        <Label text="Company Name">
+            <font>
+                <Font size="14.0"/>
+            </font>
+        </Label>
+        <Label text="VAT">
+            <font>
+                <Font size="14.0"/>
+            </font>
+        </Label>
+    </VBox>
+    <VBox layoutX="150.0" layoutY="22.0" prefHeight="130.0" prefWidth="129.0" spacing="10.0">
+        <TextField fx:id="idField"/>
+        <TextField fx:id="phoneField"/>
+        <TextField fx:id="emailField"/>
+        <TextField fx:id="bankNumField"/>
+        <TextField fx:id="creditCardField"/>
+        <TextField fx:id="streetField"/>
+        <TextField fx:id="cityField"/>
+        <TextField fx:id="provinceField"/>
+        <TextField fx:id="zipCodeField"/>
+        <TextField fx:id="companyNameField"/>
+        <TextField fx:id="vatField"/>
+    </VBox>
+    <HBox layoutX="300.0" layoutY="340.0" spacing="10.0">
+        <Button fx:id="insertButton" mnemonicParsing="false" onAction="#insertButton" prefHeight="30.0"
+                prefWidth="60.0" text="Insert"/>
+        <Button fx:id="updateButton" mnemonicParsing="false" onAction="#updateButton" prefHeight="30.0"
+                prefWidth="60.0" text="Update"/>
+        <Button fx:id="deleteButton" mnemonicParsing="false" onAction="#deleteButton" prefHeight="30.0"
+                prefWidth="60.0" text="Delete"/>
+    </HBox>
+    <HBox layoutX="300.0" layoutY="380.0" spacing="10.0">
+        <Button fx:id="secondaryButton" text="Go back" onAction="#switchToPrimary"/>
+    </HBox>
+    <TableView fx:id="tableView" layoutX="300.0" layoutY="22.0" prefHeight="310.0" prefWidth="850.0"
+               onMouseClicked="#setFields">
+        <columns>
+            <TableColumn fx:id="idColumn" prefWidth="30" text="ID"/>
+            <TableColumn fx:id="phoneColumn" text="Phone"/>
+            <TableColumn fx:id="emailColumn" text="Email"/>
+            <TableColumn fx:id="bankNumColumn" text="Bank num"/>
+            <TableColumn fx:id="creditCardColumn" text="Credit card"/>
+            <TableColumn fx:id="streetColumn" text="Street"/>
+            <TableColumn fx:id="cityColumn" text="City"/>
+            <TableColumn fx:id="provinceColumn" text="Province"/>
+            <TableColumn fx:id="zipCodeColumn" text="Zip Code"/>
+            <TableColumn fx:id="companyNameColumn" text="Company Name"/>
+            <TableColumn fx:id="vatColumn" text="VAT"/>
+        </columns>
+    </TableView>
+
+</AnchorPane>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<VBox xmlns="http://javafx.com/javafx/8.0.171"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="org.uniruse.controller.PrimaryController">
+
+    <VBox alignment="TOP_LEFT" spacing="10.0">
+        <HBox layoutX="26.0" layoutY="26.0" spacing="10.0">
+            <padding>
+                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+            </padding>
+            <Button fx:id="customersButton" text="Customers" onAction="#switchToCustomers"/>
+            <Button fx:id="shippersButton" text="Shippers" onAction="#switchToShippers"/>
+            <Button fx:id="suppliersButton" text="Suppliers" onAction="#switchToSuppliers"/>
+        </HBox>
+    </VBox>
+
+    <VBox alignment="TOP_CENTER" spacing="10.0">
+        <HBox layoutX="26.0" layoutY="26.0" spacing="10.0">
+            <padding>
+                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+            </padding>
+            <Button fx:id="medicineButton" text="Medicine" onAction="#switchToMedicine"/>
+            <Button fx:id="supplementsButton" text="Supplements" onAction="#switchToSupplements"/>
+        </HBox>
+    </VBox>
+
+    <VBox alignment="TOP_RIGHT" spacing="10.0">
+        <HBox layoutX="26.0" layoutY="26.0" spacing="10.0">
+            <children>
+                <Button fx:id="ordersButton" text="Orders" onAction="#switchToOrders"/>
+                <Button fx:id="shippingsButton" text="Shippings" onAction="#switchToShippings"/>
+                <Button fx:id="suppliesButton" text="Supplies" onAction="#switchToSupplies"/>
+                <Button fx:id="orderLinesButton" text="Order Lines" onAction="#switchToOrderLines"/>
+                <Button fx:id="supplyLinesButton" text="Supply Lines" onAction="#switchToSupplyLines"/>
+            </children>
+            <padding>
+                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+            </padding>
+        </HBox>
+    </VBox>
+</VBox>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.uniruse.controller.SupplementsController"
+            prefHeight="800.0" prefWidth="1200.0">
+
+    <VBox layoutX="26.0" layoutY="22.0" spacing="15.0">
+        <Label text="SKU">
+            <font>
+                <Font size="14.0"/>
+            </font>
+        </Label>
+        <Label text="Description">
+            <font>
+                <Font size="14.0"/>
+            </font>
+        </Label>
+        <Label text="Price">
+            <font>
+                <Font size="14.0"/>
+            </font>
+        </Label>
+        <Label text="Sales price">
+            <font>
+                <Font size="14.0"/>
+            </font>
+        </Label>
+        <Label text="Is Deleted">
+            <font>
+                <Font size="14.0"/>
+            </font>
+        </Label>
+        <Label text="Useful For">
+            <font>
+                <Font size="14.0"/>
+            </font>
+        </Label>
+    </VBox>
+    <VBox layoutX="150.0" layoutY="22.0" prefHeight="130.0" prefWidth="129.0" spacing="10.0">
+        <TextField fx:id="skuField"/>
+        <TextField fx:id="descriptionField"/>
+        <TextField fx:id="priceField"/>
+        <TextField fx:id="salePriceField"/>
+        <TextField fx:id="deletedField"/>
+        <TextField fx:id="usefulForField"/>
+    </VBox>
+    <HBox layoutX="300.0" layoutY="340.0" spacing="10.0">
+        <Button fx:id="insertButton" mnemonicParsing="false" onAction="#insertButton" prefHeight="30.0"
+                prefWidth="60.0" text="Insert"/>
+        <Button fx:id="updateButton" mnemonicParsing="false" onAction="#updateButton" prefHeight="30.0"
+                prefWidth="60.0" text="Update"/>
+        <Button fx:id="deleteButton" mnemonicParsing="false" onAction="#deleteButton" prefHeight="30.0"
+                prefWidth="60.0" text="Delete"/>
+    </HBox>
+    <HBox layoutX="300.0" layoutY="380.0" spacing="10.0">
+        <Button fx:id="secondaryButton" text="Go back" onAction="#switchToPrimary"/>
+    </HBox>
+    <TableView fx:id="tableView" layoutX="300.0" layoutY="22.0" prefHeight="310.0" prefWidth="850.0"
+               onMouseClicked="#setFields">
+        <columns>
+            <TableColumn fx:id="skuColumn" text="SKU"/>
+            <TableColumn fx:id="descriptionColumn" text="Description"/>
+            <TableColumn fx:id="priceColumn" text="Price"/>
+            <TableColumn fx:id="salePriceColumn" text="Sales price"/>
+            <TableColumn fx:id="deletedColumn" text="Deleted"/>
+            <TableColumn fx:id="usefulForColumn" text="Useful For"/>
+        </columns>
+    </TableView>
+
+</AnchorPane>

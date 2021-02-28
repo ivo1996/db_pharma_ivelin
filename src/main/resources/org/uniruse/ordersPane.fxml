@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/11.0.1"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.uniruse.controller.OrdersController">
+
+    <VBox layoutX="26.0" layoutY="22.0" spacing="15.0">
+        <Label text="ID">
+            <font>
+                <Font size="14.0"/>
+            </font>
+        </Label>
+        <Label text="Customer">
+            <font>
+                <Font size="14.0"/>
+            </font>
+        </Label>
+        <Label text="Created at">
+            <font>
+                <Font size="14.0"/>
+            </font>
+        </Label>
+        <Label text="Shipping">
+            <font>
+                <Font size="14.0"/>
+            </font>
+        </Label>
+        <Label text="Shipping time">
+            <font>
+                <Font size="14.0"/>
+            </font>
+        </Label>
+        <Label text="Street">
+            <font>
+                <Font size="14.0"/>
+            </font>
+        </Label>
+        <Label text="City">
+            <font>
+                <Font size="14.0"/>
+            </font>
+        </Label>
+        <Label text="Province">
+            <font>
+                <Font size="14.0"/>
+            </font>
+        </Label>
+        <Label text="Zip Code">
+            <font>
+                <Font size="14.0"/>
+            </font>
+        </Label>
+        <Label text="Total Price">
+            <font>
+                <Font size="14.0"/>
+            </font>
+        </Label>
+    </VBox>
+    <VBox layoutX="150.0" layoutY="22.0" prefHeight="130.0" prefWidth="129.0" spacing="10.0">
+        <TextField fx:id="idField"/>
+        <Button mnemonicParsing="false" onAction="#selectCustomer" prefHeight="30.0" prefWidth="60.0" text="select"/>
+        <TextField fx:id="createdAtField"/>
+        <Button mnemonicParsing="false" onAction="#selectShipping" prefHeight="30.0" prefWidth="60.0" text="select"/>
+        <DatePicker fx:id="shippingTimeField"/>
+        <TextField fx:id="streetField"/>
+        <TextField fx:id="cityField"/>
+        <TextField fx:id="provinceField"/>
+        <TextField fx:id="zipCodeField"/>
+        <TextField fx:id="totalPriceField"/>
+    </VBox>
+    <VBox layoutX="219.0" layoutY="60.0" prefHeight="94.0" prefWidth="129.0" spacing="50.0">
+        <Label fx:id="customerIdLabel" layoutY="300.0" text="ID:">
+            <font>
+                <Font size="14.0"/>
+            </font>
+        </Label>
+        <Label fx:id="shippingIdLabel" layoutY="300.0" text="ID:">
+            <font>
+                <Font size="14.0"/>
+            </font>
+        </Label>
+    </VBox>
+    <HBox layoutX="300.0" layoutY="340.0" spacing="10.0">
+        <Button mnemonicParsing="false" onAction="#insertButton" prefHeight="30.0" prefWidth="60.0" text="Insert"/>
+        <Button mnemonicParsing="false" onAction="#updateButton" prefHeight="30.0" prefWidth="60.0" text="Update"/>
+        <Button mnemonicParsing="false" onAction="#deleteButton" prefHeight="30.0" prefWidth="60.0" text="Delete"/>
+    </HBox>
+    <HBox layoutX="300.0" layoutY="380.0" spacing="10.0">
+        <Button onAction="#switchToPrimary" text="Go back"/>
+    </HBox>
+    <TableView fx:id="tableView" layoutX="300.0" layoutY="22.0" onMouseClicked="#setFields" prefHeight="310.0"
+               prefWidth="735.0">
+        <columns>
+            <TableColumn fx:id="idColumn" prefWidth="30" text="ID"/>
+            <TableColumn fx:id="customerColumn" text="Customer"/>
+            <TableColumn fx:id="createdAtColumn" text="Created at"/>
+            <TableColumn fx:id="shippingIdColumn" text="Shipping"/>
+            <TableColumn fx:id="shippingTimeColumn" text="Shipping time"/>
+            <TableColumn fx:id="streetColumn" text="Street"/>
+            <TableColumn fx:id="cityColumn" text="City"/>
+            <TableColumn fx:id="provinceColumn" text="Province"/>
+            <TableColumn fx:id="zipCodeColumn" text="Zip Code"/>
+            <TableColumn fx:id="totalPriceColumn" text="Total Price"/>
+        </columns>
+    </TableView>
+
+</AnchorPane>

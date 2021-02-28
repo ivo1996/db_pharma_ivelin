@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.uniruse.controller.modulars.SuppliersTableController"
+            prefHeight="400.0" prefWidth="600.0">
+
+    <TableView fx:id="suppliersTableView" prefHeight="310.0" prefWidth="850.0"
+               onMouseClicked="#setSupplierFields">
+        <columns>
+            <TableColumn fx:id="suppliersIdColumn" prefWidth="30" text="ID"/>
+            <TableColumn fx:id="suppliersPhoneColumn" text="Phone"/>
+            <TableColumn fx:id="suppliersEmailColumn" text="Email"/>
+            <TableColumn fx:id="suppliersBankNumColumn" text="Bank num"/>
+            <TableColumn fx:id="suppliersCreditCardColumn" text="Credit card"/>
+            <TableColumn fx:id="suppliersStreetColumn" text="Street"/>
+            <TableColumn fx:id="suppliersCityColumn" text="City"/>
+            <TableColumn fx:id="suppliersProvinceColumn" text="Province"/>
+            <TableColumn fx:id="suppliersZipCodeColumn" text="Zip Code"/>
+            <TableColumn fx:id="suppliersCompanyNameColumn" text="Company Name"/>
+            <TableColumn fx:id="suppliersVatColumn" text="VAT"/>
+        </columns>
+    </TableView>
+
+</AnchorPane>

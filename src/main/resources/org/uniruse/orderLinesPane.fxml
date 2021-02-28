@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.uniruse.controller.OrderLinesController"
+            prefHeight="400.0" prefWidth="600.0">
+
+    <VBox layoutX="26.0" layoutY="22.0" spacing="15.0">
+        <Label text="ID">
+            <font>
+                <Font size="14.0"/>
+            </font>
+        </Label>
+        <Label text="Title">
+            <font>
+                <Font size="14.0"/>
+            </font>
+        </Label>
+        <Label text="Author">
+            <font>
+                <Font size="14.0"/>
+            </font>
+        </Label>
+        <Label text="Year">
+            <font>
+                <Font size="14.0"/>
+            </font>
+        </Label>
+        <Label text="Pages">
+            <font>
+                <Font size="14.0"/>
+            </font>
+        </Label>
+    </VBox>
+    <VBox layoutX="87.0" layoutY="22.0" prefHeight="130.0" prefWidth="129.0" spacing="10.0">
+        <TextField fx:id="idField"/>
+        <TextField fx:id="titleField"/>
+        <TextField fx:id="authorField"/>
+        <TextField fx:id="yearField"/>
+        <TextField fx:id="pagesField"/>
+
+    </VBox>
+    <HBox layoutX="26.0" layoutY="202.0" spacing="10.0">
+        <Button fx:id="insertButton" mnemonicParsing="false" onAction="#insertButton" prefHeight="30.0"
+                prefWidth="60.0" text="Insert"/>
+        <Button fx:id="updateButton" mnemonicParsing="false" onAction="#updateButton" prefHeight="30.0"
+                prefWidth="60.0" text="Update"/>
+        <Button fx:id="deleteButton" mnemonicParsing="false" onAction="#deleteButton" prefHeight="30.0"
+                prefWidth="60.0" text="Delete"/>
+    </HBox>
+    <HBox layoutX="26.0" layoutY="242.0" spacing="10.0">
+        <Button fx:id="secondaryButton" text="Go back" onAction="#switchToPrimary"/>
+    </HBox>
+    <TableView fx:id="tableView" layoutX="238.0" layoutY="22.0" prefHeight="210.0" prefWidth="400.0">
+        <columns>
+            <TableColumn fx:id="idColumn" prefWidth="35.0" text="ID"/>
+            <TableColumn fx:id="titleColumn" prefWidth="120.0" text="Title"/>
+            <TableColumn fx:id="authorColumn" prefWidth="120.0" text="Author"/>
+            <TableColumn fx:id="yearColumn" prefWidth="60.0" text="Year"/>
+            <TableColumn fx:id="pagesColumn" prefWidth="60.0" text="Pages"/>
+        </columns>
+    </TableView>
+
+</AnchorPane>

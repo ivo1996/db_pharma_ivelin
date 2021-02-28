@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.uniruse.controller.modulars.ShippersTableController"
+            prefHeight="400.0" prefWidth="600.0">
+
+    <TableView fx:id="shippersTableView" prefHeight="310.0" prefWidth="850.0"
+               onMouseClicked="#setShipperFields">
+        <columns>
+            <TableColumn fx:id="shippersIdColumn" prefWidth="30" text="ID"/>
+            <TableColumn fx:id="shippersPhoneColumn" text="Phone"/>
+            <TableColumn fx:id="shippersEmailColumn" text="Email"/>
+            <TableColumn fx:id="shippersBankNumColumn" text="Bank num"/>
+            <TableColumn fx:id="shippersCreditCardColumn" text="Credit card"/>
+            <TableColumn fx:id="shippersStreetColumn" text="Street"/>
+            <TableColumn fx:id="shippersCityColumn" text="City"/>
+            <TableColumn fx:id="shippersProvinceColumn" text="Province"/>
+            <TableColumn fx:id="shippersZipCodeColumn" text="Zip Code"/>
+            <TableColumn fx:id="shippersCompanyNameColumn" text="Company Name"/>
+            <TableColumn fx:id="shippersVatColumn" text="VAT"/>
+        </columns>
+    </TableView>
+
+</AnchorPane>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.uniruse.controller.modulars.ShippingsTableController"
+            prefHeight="400.0" prefWidth="600.0">
+
+    <TableView fx:id="shippingsTableView" onMouseClicked="#setShippingFields" prefHeight="310.0"
+               prefWidth="735.0">
+        <columns>
+            <TableColumn fx:id="shippingsIdColumn" prefWidth="30" text="ID"/>
+            <TableColumn fx:id="shippingsCreatedAtColumn" text="Created at"/>
+            <TableColumn fx:id="shippingsDistrictColumn" text="District"/>
+            <TableColumn fx:id="shippingsShipperColumn" text="Shipper"/>
+            <TableColumn fx:id="shippingsShippDateColumn" text="Ship Date"/>
+            <TableColumn fx:id="shippingsDeliveryDateColumn" text="Delivery Date"/>
+        </columns>
+    </TableView>
+
+</AnchorPane>

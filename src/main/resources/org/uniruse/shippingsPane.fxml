@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.uniruse.controller.ShippingsController">
+
+    <VBox layoutX="26.0" layoutY="22.0" spacing="15.0">
+        <Label text="ID">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <Label text="Created At">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <Label text="District">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <Label text="Shipper">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <Label text="Ship date">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <Label text="Delivery Date">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+    </VBox>
+    <VBox layoutX="150.0" layoutY="22.0" prefHeight="130.0" prefWidth="129.0" spacing="10.0">
+        <TextField fx:id="idField" />
+        <TextField fx:id="createdAtField" />
+        <TextField fx:id="districtField" />
+        <Button mnemonicParsing="false" onAction="#selectShipper" text="select" />
+        <DatePicker fx:id="shippDateField" />
+        <DatePicker fx:id="deliveryDateField" />
+    </VBox>
+    <VBox layoutX="219.0" layoutY="129.0" prefHeight="30.0" prefWidth="129.0" spacing="50.0">
+        <Label fx:id="shipperIdLabel" layoutY="330.0" text="ID:">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+    </VBox>
+    <HBox layoutX="300.0" layoutY="340.0" spacing="10.0">
+        <Button mnemonicParsing="false" onAction="#insertButton" prefHeight="30.0" prefWidth="60.0" text="Insert" />
+        <Button mnemonicParsing="false" onAction="#updateButton" prefHeight="30.0" prefWidth="60.0" text="Update" />
+        <Button mnemonicParsing="false" onAction="#deleteButton" prefHeight="30.0" prefWidth="60.0" text="Delete" />
+    </HBox>
+    <HBox layoutX="300.0" layoutY="380.0" spacing="10.0">
+        <Button onAction="#switchToPrimary" text="Go back" />
+    </HBox>
+    <TableView fx:id="tableView" layoutX="300.0" layoutY="22.0" onMouseClicked="#setFields" prefHeight="310.0" prefWidth="735.0">
+        <columns>
+            <TableColumn fx:id="idColumn" prefWidth="30" text="ID" />
+            <TableColumn fx:id="createdAtColumn" text="Created at" />
+            <TableColumn fx:id="districtColumn" text="District" />
+            <TableColumn fx:id="shipperColumn" text="Shipper" />
+            <TableColumn fx:id="shippDateColumn" text="Ship Date" />
+            <TableColumn fx:id="deliveryDateColumn" text="Delivery Date" />
+        </columns>
+    </TableView>
+
+</AnchorPane>

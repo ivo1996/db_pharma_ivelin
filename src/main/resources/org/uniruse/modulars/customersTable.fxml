@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.uniruse.controller.modulars.CustomersTableController"
+            prefHeight="310.0" prefWidth="850.0">
+
+    <TableView fx:id="customersTableView" prefHeight="310.0" prefWidth="850.0"
+               onMouseClicked="#setCustomerFields">
+        <columns>
+            <TableColumn fx:id="customersIdColumn" prefWidth="30" text="ID"/>
+            <TableColumn fx:id="customersPhoneColumn" text="Phone"/>
+            <TableColumn fx:id="customersEmailColumn" text="Email"/>
+            <TableColumn fx:id="customersBankNumColumn" text="Bank num"/>
+            <TableColumn fx:id="customersCreditCardColumn" text="Credit card"/>
+            <TableColumn fx:id="customersStreetColumn" text="Street"/>
+            <TableColumn fx:id="customersCityColumn" text="City"/>
+            <TableColumn fx:id="customersProvinceColumn" text="Province"/>
+            <TableColumn fx:id="customersZipCodeColumn" text="Zip Code"/>
+            <TableColumn fx:id="customersFirstNameColumn" text="First Name"/>
+            <TableColumn fx:id="customersLastNameColumn" text="Last Name"/>
+        </columns>
+    </TableView>
+
+</AnchorPane>
