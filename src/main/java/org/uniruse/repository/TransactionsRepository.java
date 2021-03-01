@@ -267,6 +267,7 @@ public class TransactionsRepository {
                         ResultSet resultsetLines = statement.executeQuery();
                         while (resultsetLines.next()) {
                             SupplyLine line = new SupplyLine();
+                            line.setId(resultsetLines.getInt("id"));
                             line.setSupplyId(resultsetLines.getInt("supply_id"));
                             line.setQuantity(resultsetLines.getInt("qty"));
                             line.setPrice(resultsetLines.getDouble("price"));

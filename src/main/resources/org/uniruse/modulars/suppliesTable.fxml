@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.uniruse.controller.modulars.SuppliesTableController"
+            prefHeight="400.0" prefWidth="600.0">
+
+    <TableView fx:id="tableView" onMouseClicked="#setSupplyFields" prefHeight="310.0"
+               prefWidth="735.0">
+        <columns>
+            <TableColumn fx:id="idColumn" prefWidth="30" text="ID"/>
+            <TableColumn fx:id="suppliedAtColumn" text="Supplied At"/>
+            <TableColumn fx:id="totalPriceColumn" text="Total Price"/>
+            <TableColumn fx:id="supplierColumn" text="Supplier"/>
+        </columns>
+    </TableView>
+</AnchorPane>

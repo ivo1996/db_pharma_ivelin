@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.uniruse.controller.modulars.OrdersTableController"
+            prefHeight="400.0" prefWidth="600.0">
+
+    <TableView fx:id="tableView" onMouseClicked="#setOrderFields" prefHeight="310.0"
+               prefWidth="735.0">
+        <columns>
+            <TableColumn fx:id="idColumn" prefWidth="30" text="ID"/>
+            <TableColumn fx:id="customerColumn" text="Customer"/>
+            <TableColumn fx:id="createdAtColumn" text="Created at"/>
+            <TableColumn fx:id="shippingIdColumn" text="Shipping"/>
+            <TableColumn fx:id="shippingTimeColumn" text="Shipping time"/>
+            <TableColumn fx:id="streetColumn" text="Street"/>
+            <TableColumn fx:id="cityColumn" text="City"/>
+            <TableColumn fx:id="provinceColumn" text="Province"/>
+            <TableColumn fx:id="zipCodeColumn" text="Zip Code"/>
+            <TableColumn fx:id="totalPriceColumn" text="Total Price"/>
+        </columns>
+    </TableView>
+
+</AnchorPane>

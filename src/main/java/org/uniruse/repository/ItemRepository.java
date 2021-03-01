@@ -54,7 +54,7 @@ public class ItemRepository {
         String query = SELECT_ALL_MEDICINES + " AND c.SKU = ?";
         try (PreparedStatement statement = conn.prepareStatement(query)) {
             statement.setString(1, sku);
-            return (Medicine) buildItemCollectionFromResultSet(statement.executeQuery(), PharmaTypes.MEDICINE).get(0);
+            return buildItemCollectionFromResultSet(statement.executeQuery(), PharmaTypes.MEDICINE).isEmpty() ? null : (Medicine) buildItemCollectionFromResultSet(statement.executeQuery(), PharmaTypes.MEDICINE).get(0);
         }
     }
 
@@ -62,7 +62,7 @@ public class ItemRepository {
         String query = SELECT_ALL_SUPPLEMENTS + " AND c.SKU =  ?";
         try (PreparedStatement statement = conn.prepareStatement(query)) {
             statement.setString(1, sku);
-            return (Supplement) buildItemCollectionFromResultSet(statement.executeQuery(), PharmaTypes.SUPPLEMENT).get(0);
+            return buildItemCollectionFromResultSet(statement.executeQuery(), PharmaTypes.SUPPLEMENT).isEmpty() ? null : (Supplement) buildItemCollectionFromResultSet(statement.executeQuery(), PharmaTypes.SUPPLEMENT).get(0);
         }
     }
 

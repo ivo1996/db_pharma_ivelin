@@ -35,6 +35,14 @@ public class SupplyLine extends AtomicIndex {
         this.price = item.getPrice() * quantity;
     }
 
+    public String getItemSku() {
+        return item.getSku();
+    }
+
+    public void setItemSku(String sku) {
+        item.setSku(sku);
+    }
+
     public SupplyLine() {
     }
 

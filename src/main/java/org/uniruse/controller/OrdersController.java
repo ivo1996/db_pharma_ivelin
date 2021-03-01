@@ -2,7 +2,6 @@ package org.uniruse.controller;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -29,12 +28,6 @@ import java.io.IOException;
 import java.net.URL;
 import java.sql.SQLException;
 import java.sql.Timestamp;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.time.Instant;
-import java.time.LocalDate;
-import java.time.ZoneId;
-import java.util.Date;
 import java.util.ResourceBundle;
 
 import static org.uniruse.App.showErrorAlert;
@@ -128,8 +121,8 @@ public class OrdersController extends GoBack implements Initializable {
     private Orders getSelectedOrder() throws SQLException {
         return new Orders(
                 idField.getText() == null || idField.getText().isBlank() ? -1 : Long.parseLong(idField.getText()),
-                customerIdLabel.getText().isBlank() ? null : contragentsRepository.findCustomerById(Long.parseLong(customerIdLabel.getText().replace("ID:", ""))),
-                shippingIdLabel.getText().isBlank() ? -1 : Long.parseLong(shippingIdLabel.getText().replace("ID:", "")),
+                customerIdLabel.getText().equals("ID:") ? null : contragentsRepository.findCustomerById(Long.parseLong(customerIdLabel.getText().replace("ID:", ""))),
+                shippingIdLabel.getText().equals("ID:") ? -1 : Long.parseLong(shippingIdLabel.getText().replace("ID:", "")),
                 shippingTimeField.getValue() == null ? null : Timestamp.valueOf(shippingTimeField.getValue().atStartOfDay()),
                 new Address(streetField.getText().isBlank() ? "" : streetField.getText(),
                         cityField.getText().isBlank() ? "" : cityField.getText(),

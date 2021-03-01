@@ -50,7 +50,7 @@ public class StaticQueries {
     public static final String DELETE_SUPPLY_LINE = "DELETE FROM supply_line where id = ? ";
     public static final String DELETE_ORDER_LINE = "DELETE FROM order_lines where order_id = ? ";
 
-    public static final String SELECT_SUPPLY_LINES_BY_SUPPLY_ID = "SELECT sl.item as item, sl.supply_id as supply_id, sl.quantity as qty, sl.price as price FROM SUPPLY_LINE sl WHERE sl.SUPPLY_ID = ? ";
+    public static final String SELECT_SUPPLY_LINES_BY_SUPPLY_ID = "SELECT sl.id, sl.item as item, sl.supply_id as supply_id, sl.quantity as qty, sl.price as price FROM SUPPLY_LINE sl WHERE sl.SUPPLY_ID = ? ";
     public static final String SELECT_ORDER_LINES_BY_ORDER_ID = "select ol.item as item, ol.PRICE as price, ol.QUANTITY as qty from ORDER_LINES ol where ol.ORDER_ID = ?";
 
 }

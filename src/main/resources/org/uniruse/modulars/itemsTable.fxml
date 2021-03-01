@@ -1,14 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
 <AnchorPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="org.uniruse.controller.modulars.ItemsTableController"
             prefHeight="400.0" prefWidth="600.0">
+
+    <TableView fx:id="tableView" prefHeight="310.0" prefWidth="850.0"
+               onMouseClicked="#setItemFields">
+        <columns>
+            <TableColumn fx:id="skuColumn" text="SKU"/>
+            <TableColumn fx:id="descriptionColumn" text="Description"/>
+            <TableColumn fx:id="priceColumn" text="Price"/>
+            <TableColumn fx:id="salePriceColumn" text="Sales price"/>
+            <TableColumn fx:id="deletedColumn" text="Deleted"/>
+        </columns>
+    </TableView>
 
 </AnchorPane>

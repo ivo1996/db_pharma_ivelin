@@ -9,64 +9,61 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="org.uniruse.controller.SupplyLinesController"
-            prefHeight="400.0" prefWidth="600.0">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.uniruse.controller.SupplyLinesController">
 
     <VBox layoutX="26.0" layoutY="22.0" spacing="15.0">
         <Label text="ID">
             <font>
-                <Font size="14.0"/>
+                <Font size="14.0" />
             </font>
         </Label>
-        <Label text="Title">
+        <Label text="Supply">
             <font>
-                <Font size="14.0"/>
+                <Font size="14.0" />
             </font>
         </Label>
-        <Label text="Author">
+        <Label text="Item">
             <font>
-                <Font size="14.0"/>
+                <Font size="14.0" />
             </font>
         </Label>
-        <Label text="Year">
+        <Label text="Quantity">
             <font>
-                <Font size="14.0"/>
-            </font>
-        </Label>
-        <Label text="Pages">
-            <font>
-                <Font size="14.0"/>
+                <Font size="14.0" />
             </font>
         </Label>
     </VBox>
-    <VBox layoutX="87.0" layoutY="22.0" prefHeight="130.0" prefWidth="129.0" spacing="10.0">
-        <TextField fx:id="idField"/>
-        <TextField fx:id="titleField"/>
-        <TextField fx:id="authorField"/>
-        <TextField fx:id="yearField"/>
-        <TextField fx:id="pagesField"/>
-
+    <VBox layoutX="150.0" layoutY="22.0" prefHeight="130.0" prefWidth="129.0" spacing="10.0">
+        <TextField fx:id="idField" />
+        <Button mnemonicParsing="false" onAction="#selectSupplies" prefHeight="30.0" prefWidth="60.0" text="select" />
+        <Button mnemonicParsing="false" onAction="#selectItem" prefHeight="30.0" prefWidth="60.0" text="select" />
+        <TextField fx:id="quantityField" />
     </VBox>
-    <HBox layoutX="26.0" layoutY="202.0" spacing="10.0">
-        <Button fx:id="insertButton" mnemonicParsing="false" onAction="#insertButton" prefHeight="30.0"
-                prefWidth="60.0" text="Insert"/>
-        <Button fx:id="updateButton" mnemonicParsing="false" onAction="#updateButton" prefHeight="30.0"
-                prefWidth="60.0" text="Update"/>
-        <Button fx:id="deleteButton" mnemonicParsing="false" onAction="#deleteButton" prefHeight="30.0"
-                prefWidth="60.0" text="Delete"/>
+    <VBox layoutX="219.0" layoutY="60.0" prefHeight="45.0" prefWidth="129.0" spacing="15.0">
+        <Label fx:id="supplyIdLabel" layoutY="300.0" text="ID:">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <Label fx:id="itemIdLabel" layoutY="300.0" text="ID:">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+    </VBox>
+    <HBox layoutX="300.0" layoutY="340.0" spacing="10.0">
+        <Button mnemonicParsing="false" onAction="#insertButton" prefHeight="30.0" prefWidth="60.0" text="Insert" />
     </HBox>
-    <HBox layoutX="26.0" layoutY="242.0" spacing="10.0">
-        <Button fx:id="secondaryButton" text="Go back" onAction="#switchToPrimary"/>
+    <HBox layoutX="300.0" layoutY="380.0" spacing="10.0">
+        <Button onAction="#switchToPrimary" text="Go back" />
     </HBox>
-    <TableView fx:id="tableView" layoutX="238.0" layoutY="22.0" prefHeight="210.0" prefWidth="400.0">
+    <TableView fx:id="tableView" layoutX="300.0" layoutY="22.0" onMouseClicked="#setFields" prefHeight="310.0" prefWidth="735.0">
         <columns>
-            <TableColumn fx:id="idColumn" prefWidth="35.0" text="ID"/>
-            <TableColumn fx:id="titleColumn" prefWidth="120.0" text="Title"/>
-            <TableColumn fx:id="authorColumn" prefWidth="120.0" text="Author"/>
-            <TableColumn fx:id="yearColumn" prefWidth="60.0" text="Year"/>
-            <TableColumn fx:id="pagesColumn" prefWidth="60.0" text="Pages"/>
+            <TableColumn fx:id="idColumn" prefWidth="30" text="ID" />
+            <TableColumn fx:id="supplyColumn" text="Supply ID" />
+            <TableColumn fx:id="itemColumn" text="Item SKU" />
+            <TableColumn fx:id="quantityColumn" text="Quantity" />
+            <TableColumn fx:id="priceColumn" text="Price" />
         </columns>
     </TableView>
 

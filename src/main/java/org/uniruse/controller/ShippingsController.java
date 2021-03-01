@@ -94,8 +94,8 @@ public class ShippingsController extends GoBack implements Initializable {
     private Shippings getSelectedShipping() throws SQLException {
         return new Shippings(
                 idField.getText() == null || idField.getText().isBlank() ? -1 : Long.parseLong(idField.getText()),
-                districtField.getText().isBlank() ? "" : districtField.getText(),
-                shipperIdLabel.getText().isBlank() ? null : contragentsRepository.findShipperById(Long.parseLong(shipperIdLabel.getText().replace("ID:", ""))),
+                districtField.getText().equals("ID:") ? "" : districtField.getText(),
+                shipperIdLabel.getText().equals("ID:") ? null : contragentsRepository.findShipperById(Long.parseLong(shipperIdLabel.getText().replace("ID:", ""))),
                 shippDateField.getValue() == null ? null : Timestamp.valueOf(shippDateField.getValue().atStartOfDay()),
                 deliveryDateField.getValue() == null ? null : Timestamp.valueOf(deliveryDateField.getValue().atStartOfDay())
         );

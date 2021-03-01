@@ -16,7 +16,6 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import org.uniruse.App;
-import org.uniruse.controller.modulars.ShippersTableController;
 import org.uniruse.controller.modulars.SuppliersTableController;
 import org.uniruse.data.transactions.Supply;
 import org.uniruse.repository.ContragentsRepository;

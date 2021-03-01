@@ -11,7 +11,6 @@ import org.uniruse.data.transactions.Shippings;
 import org.uniruse.repository.TransactionsRepository;
 import org.uniruse.util.DBUtil;
 
-import java.sql.SQLException;
 import java.sql.Timestamp;
 
 /**

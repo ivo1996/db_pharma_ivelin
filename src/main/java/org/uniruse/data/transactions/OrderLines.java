@@ -15,6 +15,14 @@ public class OrderLines extends AtomicIndex {
     private double quantity;
     private double price;
 
+    public String getItemSku() {
+        return item.getSku();
+    }
+
+    public void setItemSku(String sku) {
+        item.setSku(sku);
+    }
+
     public long getOrderId() {
         return orderId;
     }
